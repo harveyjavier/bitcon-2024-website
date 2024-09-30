@@ -7,12 +7,8 @@ import { useEffect, useRef, useState } from "react";
 import type { LngLatLike } from "@maptiler/sdk";
 import maplibregl from "maplibre-gl";
 
-if (!process.env.NEXT_PUBLIC_MAP_TILER_API_KEY) {
-  throw new Error("Missing MAP_TILER_API_KEY");
-}
-
 export default function About() {
-  const mapContainer = useRef<HTMLDivElement | null>(null); // Specify the type of ref
+  const mapContainer = useRef<HTMLDivElement | null>(null);
   const [viewState] = useState({
     center: [16.62662018, 49.2125578] as LngLatLike,
     zoom: 14,
