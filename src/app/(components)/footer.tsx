@@ -7,6 +7,23 @@ export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-12">
       <div className="container mx-auto px-4">
+        <div className="mb-8 pb-8 border-b border-gray-700 text-center text-gray-400">
+          <div className="flex justify-center items-center space-x-4 mb-4">
+            <Link href="https://bicolit.org" target="_blank">
+              <Image
+                src={siteConfig.logo}
+                alt="Bicol IT Logo"
+                height={79}
+                width={79}
+                priority
+              />
+            </Link>
+          </div>
+          <p className="text-sm">
+            © {new Date().getFullYear()} BITCON Bicol IT Conference. All rights
+            reserved.
+          </p>
+        </div>
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">About Bicol IT</h3>
@@ -42,23 +59,6 @@ export default function Footer() {
               Albay District, Legazpi City, 4500, Albay, Philippines
             </p>
           </div>
-        </div>
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-          <div className="flex justify-center items-center space-x-4 mb-4">
-            <Link href="https://bicolit.org" target="_blank">
-              <Image
-                src={siteConfig.logo}
-                alt="Bicol IT Logo"
-                height={79}
-                width={79}
-                priority
-              />
-            </Link>
-          </div>
-          <p className="text-sm">
-            © {new Date().getFullYear()} BITCON Bicol IT Conference. All rights
-            reserved.
-          </p>
         </div>
       </div>
     </footer>
