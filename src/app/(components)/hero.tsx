@@ -12,7 +12,7 @@ export default function Hero() {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const targetDate = new Date("10/25/2024 01:00:00");
+    const targetDate = new Date("2024-10-25T01:00:00");
 
     const updateTimer = () => {
       const now = new Date();
