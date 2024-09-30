@@ -7,21 +7,15 @@ import Register from "@/app/(components)/register";
 import Footer from "@/app/(components)/footer";
 
 export default function Home() {
-  const timeLeft = {
-    Days: 15,
-    Hours: 10,
-    Minutes: 35,
-  };
-
   return (
-    <div>
+    <>
       <Header />
-      <Hero timeLeft={timeLeft} />
+      <Hero />
       <About />
       <Speakers />
       <Schedule />
       <Register />
       <Footer />
-    </div>
+    </>
   );
 }
