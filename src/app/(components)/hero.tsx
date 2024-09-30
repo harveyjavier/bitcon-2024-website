@@ -14,9 +14,8 @@ export default function Hero() {
   useEffect(() => {
     const targetDate = new Date("2024-10-25T01:00:00");
 
-    const updateTimer = () => {
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
+    const interval = setInterval(() => {
+      const difference = targetDate.getTime() - new Date().getTime();
 
       if (difference <= 0) {
         setConferenceTime(true);
@@ -28,12 +27,10 @@ export default function Hero() {
         setMinutes(Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)));
         setSeconds(Math.floor((difference % (1000 * 60)) / 1000));
       }
-    };
-
-    const interval = setInterval(updateTimer, 1000);
+    }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [conferenceTime]);
   return (
     <section className="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-24 md:py-32">
       <div className="absolute inset-0 bg-black opacity-50"></div>
