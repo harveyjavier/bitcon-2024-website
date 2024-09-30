@@ -18,7 +18,7 @@ export default function Hero({
             text="BITCON 2024"
           />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Empowering Bicol's Tech Future
+            Empowering Bicol&apos;s Tech Future
           </h1>
           <p className="text-xl mb-8">
             Join the premier IT conference in the Bicol region. Innovate, Learn,
