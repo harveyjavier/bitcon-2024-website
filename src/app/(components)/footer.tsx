@@ -1,15 +1,21 @@
-"use client";
-
 import Link from "next/link";
-import { Code } from "lucide-react";
+import Image from "next/image";
+import { siteConfig } from "@/lib/config/site";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-gray-400 py-12">
       <div className="container mx-auto px-4 text-center">
         <div className="flex justify-center items-center space-x-4 mb-4">
-          <Code className="h-6 w-6 text-blue-600" />
-          <span className="font-bold text-xl text-gray-100">BITCON 2024</span>
+          <Link href="https://bicolit.org" target="_blank">
+            <Image
+              src={siteConfig.logo}
+              alt="Bicol IT Logo"
+              height={79}
+              width={79}
+              priority
+            />
+          </Link>
         </div>
         <p className="text-sm">
           © {new Date().getFullYear()} BITCON Bicol IT Conference. All rights
