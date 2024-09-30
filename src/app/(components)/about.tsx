@@ -13,7 +13,7 @@ if (!process.env.NEXT_PUBLIC_MAP_TILER_API_KEY) {
 
 export default function About() {
   const mapContainer = useRef<HTMLDivElement | null>(null); // Specify the type of ref
-  const [viewState, setViewState] = useState({
+  const [viewState] = useState({
     center: [16.62662018, 49.2125578] as LngLatLike,
     zoom: 14,
   });
@@ -37,9 +37,8 @@ export default function About() {
       "bottom-right"
     );
 
-    // Cleanup on unmount
     return () => {
-      map.remove(); // Clean up the map instance
+      map.remove();
     };
   }, [viewState]); // Add viewState as a dependency
 
