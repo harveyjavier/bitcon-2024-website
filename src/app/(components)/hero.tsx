@@ -1,8 +1,8 @@
 "use client";
 
-import HyperText from "@/components/ui/hyper-text";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { useEffect, useState } from "react";
+import Bitcon from "../../components/animation/Bitcon";
 
 export default function Hero() {
   const [conferenceTime, setConferenceTime] = useState(false);
@@ -36,10 +36,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <HyperText
-            className="text-4xl md:text-7xl font-bold mb-6 text-center mx-auto"
-            text="BITCON 2024"
-          />
+          <Bitcon />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Empowering Bicol&apos;s Tech Future
           </h1>
