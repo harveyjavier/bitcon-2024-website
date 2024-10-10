@@ -12,9 +12,8 @@ function Bitcon() {
       }
 
       if (container.current instanceof HTMLDivElement) {
-        container.current.innerHTML = frameCollection[index.current];
+        container.current!.innerHTML = frameCollection[index.current];
       }
-
       index.current++;
     }, 50);
   }, []);
